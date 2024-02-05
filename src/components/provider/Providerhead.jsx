@@ -1,13 +1,8 @@
-import React, { useEffect } from "react";
-import { initHeaderScrolled } from "../../assets/js/headerScrolled";
-// import SignOutButton from "../ui-components";
+import React from "react";
+
 import partimg from "../../assets/img/partage-log.png";
 
 const Providerhead = ({ onClick }) => {
-  useEffect(() => {
-    initHeaderScrolled();
-  }, []);
-
   return (
     <>
       <section id="smallhero">
@@ -16,7 +11,6 @@ const Providerhead = ({ onClick }) => {
           data-aos="fade-up"
           data-aos-delay="50"
         >
-            
           <div
             className="col-lg-6 order-1 order-lg-1"
             data-aos="fade-left"

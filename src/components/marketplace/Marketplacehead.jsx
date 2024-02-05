@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
-import { initHeaderScrolled } from "../../assets/js/headerScrolled";
-// import SignOutButton from "../ui-components";
+import React from "react";
+
 import partimg from "../../assets/img/partage-log.png";
 
 const Marketplacehead = ({ onClick }) => {
-  useEffect(() => {
-    initHeaderScrolled();
-  }, []);
 
   return (
     <>
