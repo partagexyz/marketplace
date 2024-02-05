@@ -4,6 +4,7 @@ import React from "react";
 import boxImage from "../../assets/img/connect-wallet.jpg";
 import boxImage2 from "../../assets/img/send-payment.jpg";
 import boxImage3 from "../../assets/img/receive-password.jpg";
+import Image from "next/image";
 
 const Topcreators = () => {
   const topCreators = [
@@ -23,7 +24,7 @@ const Topcreators = () => {
 
   return (
     <section id="top-creators" className="top-creators">
-      <div className="container" data-aos="fade-up">
+      <div className="container">
         <div className="makhead">
           <div className="section-title">
             <p>TOP CREATORS</p>
@@ -41,8 +42,6 @@ const Topcreators = () => {
             <div
               key={index}
               className="col-md-6 col-lg-3 d-flex align-items-stretch mb-3 mb-lg-0"
-              data-aos="zoom-in"
-              data-aos-delay={100 * (index + 1)}
             >
               <div className="icon-box">
                 <a href="/provider">
@@ -51,7 +50,7 @@ const Topcreators = () => {
                       <span>{index + 1}</span>
                     </div>
                     <div className="text-center">
-                      <img src={boxImage} alt={`Top Creator ${index + 1}`} />
+                      <Image src={boxImage} alt={`Top Creator ${index + 1}`} />
                     </div>
                   </div>
                   <div className="text-container">

@@ -2,6 +2,7 @@ import React from "react";
 import boxImage1 from "../../assets/img/connect-wallet.jpg";
 import boxImage2 from "../../assets/img/send-payment.jpg";
 import boxImage3 from "../../assets/img/receive-password.jpg";
+import Image from "next/image";
 
 const Morenft = () => {
   const items = [
@@ -51,7 +52,7 @@ const Morenft = () => {
 
   return (
     <section id="nftcollections" className="nftcollections">
-      <div className="container" data-aos="fade-up">
+      <div className="container">
         <div className="section-title">
           <p>More from this Creator</p>
         </div>
@@ -61,12 +62,10 @@ const Morenft = () => {
             <div
               key={index}
               className="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay={50 * (index + 1)}
             >
               <div className="card">
                 <a href="/details">
-                  <img src={item.image} className="card-img-top" alt="..." />
+                  <Image src={item.image} className="card-img-top" alt="..." />
                 </a>
 
                 <div className="card-body">
@@ -74,7 +73,7 @@ const Morenft = () => {
                     <a href="/details">{item.title}</a>
                   </h5>
                   <p className="description">
-                    <img src={item.image} id="collectionprofile" alt="..." />{" "}
+                    <Image src={item.image} id="collectionprofile" alt="..." />{" "}
                     <span id="pricetag">{item.profile}</span>
                   </p>
                 </div>

@@ -2,11 +2,12 @@ import React from "react";
 import boxImage1 from "../../assets/img/Partwork1.png";
 import boxImage2 from "../../assets/img/Partwork2.png";
 import boxImage3 from "../../assets/img/Partwork3.png";
+import Image from "next/image";
 
 const Howitworks = () => {
   return (
     <section id="about-boxes" className="about-boxes">
-      <div className="container" data-aos="fade-up">
+      <div className="container">
         <div className="section-title">
           <p>HOW IT WORKS</p>
           <h2>Find out how to get started</h2>
@@ -36,12 +37,10 @@ const Howitworks = () => {
             <div
               key={index}
               className="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay={100 * (index + 1)}
             >
               <div className="card">
                 <div className="text-center card-img">
-                  <img
+                  <Image
                     id="woksimg"
                     src={item.imgSrc}
                     className="card-img-top"

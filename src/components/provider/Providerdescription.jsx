@@ -1,19 +1,16 @@
 import React from "react";
 import joinimg from "../../assets/img/partabout.png";
 import boxImage2 from "../../assets/img/partabout.png";
+import Image from "next/image";
 
 const Description = () => {
   return (
     <>
       <section id="nftdetails" className="nftdetails">
-        <div className="container" data-aos="fade-up">
+        <div className="container">
           <div id="aboutmore" className="row">
             <h1 id="provhead">SOOSH</h1>
-            <div
-              className="col-lg-6 col-md-6 order-2 order-lg-1 content"
-              data-aos="fade-left"
-              data-aos-delay="20"
-            >
+            <div className="col-lg-6 col-md-6 order-2 order-lg-1 content">
               <div className="col-12">
                 <div className="row">
                   <div className="col-4">
@@ -37,11 +34,7 @@ const Description = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-lg-6 col-md-6 pt-4 pt-lg-0 order-1 order-lg-2 content"
-              data-aos="fade-right"
-              data-aos-delay="20"
-            >
+            <div className="col-lg-6 col-md-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
               <div className="col-12">
                 <div className="row">
                   <div className="providerbut">
@@ -62,11 +55,7 @@ const Description = () => {
               </div>
             </div>
           </div>
-          <div
-            className="col-lg-12 col-md-12 order-1 order-lg-1 content"
-            data-aos="fade-left"
-            data-aos-delay="20"
-          >
+          <div className="col-lg-12 col-md-12 order-1 order-lg-1 content">
             <br></br>
             <div className="headpare">
               <h5>BIO</h5>

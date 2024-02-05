@@ -1,16 +1,14 @@
 import React from "react";
 import partimg from "../../assets/img/partage-log.png";
-
+import Image from "next/image";
 
 const Marketplacehead = ({ onClick }) => {
-
-
   return (
     <>
       <section id="hero">
         <div className="hero-container">
           <div className="text-center">
-            <img src={partimg} id="partimg" alt="..." />
+            <Image src={partimg} id="partimg" alt="..." />
           </div>
           <h1>PARTAGE</h1>
           <h2>Shared Utilities on Near</h2>

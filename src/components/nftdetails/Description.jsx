@@ -1,23 +1,20 @@
 import React from "react";
 import joinimg from "../../assets/img/partabout.png";
 import boxImage2 from "../../assets/img/partabout.png";
+import Image from "next/image";
 
 const Description = () => {
   return (
     <>
       <section id="nftdetails" className="nftdetails">
-        <div className="container" data-aos="fade-up">
+        <div className="container">
           <div id="aboutmore" className="row">
-            <div
-              className="col-lg-6 col-md-6 order-1 order-lg-1 content"
-              data-aos="fade-left"
-              data-aos-delay="20"
-            >
+            <div className="col-lg-6 col-md-6 order-1 order-lg-1 content">
               <div className="headpare">
                 <h5>Created By</h5>
 
                 <p className="description">
-                  <img src={joinimg} id="collectionprofile" alt="..." />{" "}
+                  <Image src={joinimg} id="collectionprofile" alt="..." />{" "}
                   <span id="pricetag">Shoosi pank</span>
                 </p>
               </div>
@@ -72,20 +69,18 @@ const Description = () => {
             </div>
             <div
               className="col-lg-6 col-md-6 pt-4 pt-lg-0 order-2 order-lg-2 content"
-              data-aos="fade-right"
-              data-aos-delay="20"
             >
               <h3>00 : 00 : 00</h3>
 
               <div className="card">
-                <img src={joinimg} className="card-img-top" alt="..." />
+                <Image src={joinimg} className="card-img-top" alt="..." />
 
                 <div className="card-body">
                   <h5 className="card-title">
                     <a href="">gedhge</a>
                   </h5>
                   <p className="description">
-                    <img src={joinimg} id="collectionprofile" alt="..." />{" "}
+                    <Image src={joinimg} id="collectionprofile" alt="..." />{" "}
                     <span id="pricetag">bkbef</span>
                   </p>
                 </div>

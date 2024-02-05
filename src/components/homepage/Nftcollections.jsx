@@ -2,6 +2,7 @@ import React from "react";
 import boxImage1 from "../../assets/img/connect-wallet.jpg";
 import boxImage2 from "../../assets/img/send-payment.jpg";
 import boxImage3 from "../../assets/img/receive-password.jpg";
+import Image from "next/image";
 
 const Nftcollections = () => {
   const items = [
@@ -45,7 +46,7 @@ const Nftcollections = () => {
 
   return (
     <section id="nftcollections" className="nftcollections">
-      <div className="container" data-aos="fade-up">
+      <div className="container">
         <div className="section-title">
           <p>NFT Collections</p>
           <h2>Checkout our weekly trending collections</h2>
@@ -56,20 +57,18 @@ const Nftcollections = () => {
             <div
               key={index}
               className="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay={50 * (index + 1)}
             >
               <div className="card">
                 <a href="/details">
-                  <img src={item.image} className="card-img-top" alt="..." />
+                  <Image src={item.image} className="card-img-top" alt="..." />
                 </a>
                 <div id="collecti" className="col-12">
                   <div className="row">
                     <div className="col-4">
-                      <img src={item.image} alt="..." />
+                      <Image src={item.image} alt="..." />
                     </div>
                     <div className="col-4">
-                      <img src={item.image} alt="..." />
+                      <Image src={item.image} alt="..." />
                     </div>
                     <div className="col-4">
                       <p id="collectinum">
@@ -84,7 +83,7 @@ const Nftcollections = () => {
                     <a href="/details">{item.title}</a>
                   </h5>
                   <p className="description">
-                    <img src={item.image} id="collectionprofile" alt="..." />{" "}
+                    <Image src={item.image} id="collectionprofile" alt="..." />{" "}
                     <span id="pricetag">{item.profile}</span>
                   </p>
                 </div>
