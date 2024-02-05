@@ -8,7 +8,7 @@ const Marketplacehead = ({ onClick }) => {
   return (
     <>
       <section id="hero">
-        <div className="hero-container" data-aos="fade-up" data-aos-delay="150">
+        <div className="hero-container">
           <div className="text-center">
             <img src={partimg} id="partimg" alt="..." />
           </div>
