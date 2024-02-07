@@ -1,15 +1,23 @@
-import LandingPage from "@/components/Landing";
 import type { Metadata } from "next";
+import Homeheader from "@/components/homepage/Homeheader";
+import Howitworks from "@/components/homepage/Howitworks";
+import Join from "@/components/homepage/Join";
+import Nftcollections from "@/components/homepage/Nftcollections";
+import Topcreators from "@/components/homepage/Topcreators";
 
 export const metadata: Metadata = {
-  title: "Mintbase Simple Marketplace Example",
-  description: "Simple Marketplace",
+  title: "Partage Marketplace",
+  description: "Welcome to partage Marketplace",
 };
 
 export default function Home() {
   return (
-    <main className="px-24 py-12">
-      <LandingPage />
-    </main>
+    <>
+      <Homeheader onClick={undefined} />
+      <Howitworks />
+      <Topcreators />
+      <Nftcollections />
+      <Join />
+    </>
   );
 }
