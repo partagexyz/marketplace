@@ -1,7 +1,7 @@
 import React from "react";
-import boxImage1 from "../../assets/img/Partwork1.png";
-import boxImage2 from "../../assets/img/Partwork2.png";
-import boxImage3 from "../../assets/img/Partwork3.png";
+import boxImage1 from "../../assets/img/partwork1.png";
+import boxImage2 from "../../assets/img/partwork2.png";
+import boxImage3 from "../../assets/img/partwork3.png";
 import Image from "next/image";
 
 const Howitworks = () => {
