@@ -17,21 +17,21 @@ const Howitworks = () => {
           {[
             {
               imgSrc: boxImage1,
-              title: "Setup Your Wallet",
+              title: "Purchase your Lock",
               description:
-                "Connect your preferred Near wallet by clicking the Connect Wallet button at the top of this page.",
+                "Secure your peace of mind today, and get a compatible lock from our shop.",
             },
             {
               imgSrc: boxImage2,
-              title: "Create Collection",
+              title: "Try our App",
               description:
-                "Browse all available locked Utilities in the Partage Marketplace, and send payment for your desired use time.",
+                "Stay connected on the go, and try our app for seamless access to a world of exclusive features at your fingertips.",
             },
             {
               imgSrc: boxImage3,
-              title: "Start Eaning",
+              title: "Connect your wallet",
               description:
-                "Receive a secret password in your email and type it on the Partage lock to access the locked utility you chose.",
+                "Experience the full potential of Partage by connecting your wallet for instant access to your user dahsboard.",
             },
           ].map((item, index) => (
             <div
