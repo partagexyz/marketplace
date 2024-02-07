@@ -45,17 +45,25 @@ const Navbar = ({ onClick }) => {
               <li>
                 <a
                   className="nav-link scrollto"
-                  href="https://medium.com/@juliencarbonnell/democratizing-access-to-utilities-blockchain-for-smart-cities-25eefb0348e7"
+                  href="https://shop.hellopartage.xyz"
                 >
-                  Rankings
+                  Shop
                 </a>
               </li>
               <li>
                 <a
                   className="nav-link scrollto"
-                  href="https://medium.com/@juliencarbonnell/democratizing-access-to-utilities-blockchain-for-smart-cities-25eefb0348e7"
+                  href="https://app.hellopartage.xyz"
                 >
-                  Documentation
+                  App
+                </a>
+              </li>
+              <li>
+                <a
+                  className="nav-link scrollto"
+                  href="https://medium.com/partagexyz/partage-white-paper-v2-c0cbea46e2f8"
+                >
+                  White Paper
                 </a>
               </li>
               <li>
