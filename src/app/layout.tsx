@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import "../styles.css";
 // import "./globals.css";
 import "@/assets/css/style.css";
-import "@/assets/vendor/aos/aos.css";
+// import "@/assets/vendor/aos/aos.css";
 import "@/assets/vendor/bootstrap/css/bootstrap.min.css";
 import "@/assets/vendor/bootstrap-icons/bootstrap-icons.css";
 import "@/assets/vendor/boxicons/css/boxicons.min.css";
