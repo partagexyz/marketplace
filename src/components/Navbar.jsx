@@ -70,9 +70,9 @@ const Navbar = ({ onClick }) => {
                   </li>
 
                   <li>
-                    <span onClick={disconnect} className="getstarted scrollto">
+                    <a onClick={disconnect} className="getstarted scrollto">
                       Disconnect Wallet
-                    </span>
+                    </a>
                   </li>
                 </>
               ) : (
