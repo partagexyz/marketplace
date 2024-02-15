@@ -67,7 +67,7 @@ const Footer = () => {
           <div className="copyright">
             &copy; Copyright{" "}
             <strong>
-              <span>Partage, 2023</span>
+              <span>CivicTech OÜ, 2024</span>
             </strong>
             . All Rights Reserved
           </div>

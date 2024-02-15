@@ -12,11 +12,11 @@ const Marketplacehead = ({ onClick }) => {
           </div>
           <h1>PARTAGE</h1>
           <h2>Shared Utilities on Near</h2>
-          <div className="d-flex">
+          {/*<div className="d-flex">
             <a onClick={onClick} className="btn-get-started scrollto">
               <b>Connect Wallet</b>
             </a>
-          </div>
+          </div>*/}
         </div>
       </section>
     </>
