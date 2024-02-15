@@ -1,4 +1,7 @@
 # Marketplace
+
+This repository contains the 2nd version of Partage's marketplace. Built on the Near Protocol, using mintbase template, it is built on top of Partage Lock v2 and gives their users access to the full functionality of Partage's sharing network.
+
 <img src="https://i.imgur.com/HGEn9P3.jpg" alt="cover_image" width="0" />
 This is a simple marketplace example built on top of Next.js 14
 
