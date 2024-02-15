@@ -86,7 +86,7 @@ const Navbar = ({ onClick }) => {
             <i className="bi bi-list mobile-nav-toggle"></i>
             <br></br>
           </nav>
-          {/* .navbar */}
+          {/* end .navbar */}
         </div>
       </header>
     </>
