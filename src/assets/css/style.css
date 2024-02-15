@@ -9,6 +9,7 @@ title-colour: #c0cad1;
 hover-color: #c5f801;
 hover-backgroung: black;
 input: #586a77 or #0c1318 or #15222b
+cerd bg: #3b3b3b
  */
 body {
   font-family: "Open Sans", sans-serif;
@@ -821,10 +822,10 @@ section {
 .about .card {
   border-radius: 10px;
   width: 70%;
-  border: 1px solid #3b3b3b;
+  border: 1px solid rgba(29, 42, 53, 0.7);
   margin-left: 20px;
   margin-right: 20px;
-  background-color: #3b3b3b;
+  background-color: rgba(29, 42, 53, 0.7);
   margin-bottom: 30px;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   /* transition: all 0.3s ease-in-out; */
@@ -914,9 +915,9 @@ section {
 .nftdetails .card {
   border-radius: 10px;
   width: 70%;
-  border: 1px solid #3b3b3b;
+  border: 1px solid rgba(29, 42, 53, 0.7);
 
-  background-color: #3b3b3b;
+  background-color: rgba(29, 42, 53, 0.7);
   margin-bottom: 30px;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   /* transition: all 0.3s ease-in-out; */
@@ -975,6 +976,7 @@ section {
 # About Boxes
 --------------------------------------------------------------*/
 .about-boxes {
+  /* background: url("../img/about-boxes-bg.jpg") center top no-repeat fixed; */
   background-size: cover;
   padding: 60px 0 30px 0;
   position: relative;
@@ -999,39 +1001,62 @@ section {
 
 .about-boxes .card {
   border-radius: 8px;
-  border: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: transparent;
+  border: 1px solid rgba(29, 42, 53, 0.7);
+  background-color: rgba(29, 42, 53, 0.7);
+  box-shadow: 0px 2px 15px rgba(160, 154, 154, 0.1);
   margin-bottom: 30px;
 }
 
-.about-boxes .card-img {
-  max-width: 100%; /* Ensure the image doesn't exceed the card width */
+.about-boxes .card-icon {
+  text-align: center;
+  margin-top: -32px;
 }
-#woksimg {
-  height: 200px;
-  width: 200px;
+
+.about-boxes .card-icon i {
+  font-size: 32px;
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  padding-top: 5px;
+  text-align: center;
+  background-color: #c5f801;
+  border-radius: 4px;
+  text-align: center;
+  border: 4px solid #fff;
+  transition: 0.3s;
+  display: inline-block;
 }
+
 .about-boxes .card-body {
-  padding: 20px; /* Adjust padding as needed */
+  padding-top: 12px;
 }
 
 .about-boxes .card-title {
-  color: #c5f801;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 15px;
+}
+
+.about-boxes .card-title a {
+  color: #c0cad1;
+}
+
+.about-boxes .card-title a:hover {
+  color: #c5f801;
 }
 
 .about-boxes .card-text {
   color: #fff;
-  text-align: justify; /* Add justification to the text */
 }
 
 .about-boxes .card:hover .card-icon i {
   background: black;
   color: #c5f801;
+}
+
+@media (max-width: 1024px) {
+  .about-boxes {
+    background-attachment: scroll;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1062,10 +1087,10 @@ section {
 
 .nftcollections .card {
   border-radius: 10px;
-  border: 1px solid #3b3b3b;
+  border: 1px solid rgba(29, 42, 53, 0.7);
   margin-left: 20px;
   margin-right: 20px;
-  background-color: #3b3b3b;
+  background-color: rgba(29, 42, 53, 0.7);
   margin-bottom: 30px;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   transition: all 0.3s ease-in-out;
@@ -1165,7 +1190,7 @@ section {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #ffffff #3b3b3b;
+    scrollbar-color: #ffffff rgba(29, 42, 53, 0.7);
     margin-bottom: 20px;
   }
   .nftcollections .image-container {
@@ -1187,7 +1212,7 @@ section {
 
   .nftcollections .icon-boxes::-webkit-scrollbar-thumb {
     min-height: 5px;
-    background-color: #3b3b3b;
+    background-color: rgba(29, 42, 53, 0.7);
     border-radius: 10px;
     width: 200px;
     border: 3px solid #ffffff;
@@ -1212,7 +1237,7 @@ section {
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
-  background: #3b3b3b;
+  background: rgba(29, 42, 53, 0.7);
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -1290,7 +1315,7 @@ section {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #ffffff #3b3b3b;
+    scrollbar-color: #ffffff rgba(29, 42, 53, 0.7);
     margin-bottom: 20px;
   }
   .top-creators .image-container {
@@ -1312,7 +1337,7 @@ section {
 
   .top-creators .icon-boxes::-webkit-scrollbar-thumb {
     min-height: 5px;
-    background-color: #3b3b3b;
+    background-color: rgba(29, 42, 53, 0.7);
     border-radius: 10px;
     width: 200px;
     border: 3px solid #ffffff;
@@ -1503,10 +1528,10 @@ section {
 
 .marketplac .card {
   border-radius: 10px;
-  border: 1px solid #3b3b3b;
+  border: 1px solid rgba(29, 42, 53, 0.7);
   margin-left: 20px;
   margin-right: 20px;
-  background-color: #3b3b3b;
+  background-color: rgba(29, 42, 53, 0.7);
   margin-bottom: 30px;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   transition: all 0.3s ease-in-out;
@@ -1549,7 +1574,7 @@ section {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #ffffff #3b3b3b;
+    scrollbar-color: #ffffff rgba(29, 42, 53, 0.7);
     margin-bottom: 20px;
   }
   .marketplac .image-container {
@@ -1571,7 +1596,7 @@ section {
 
   .marketplac .icon-boxes::-webkit-scrollbar-thumb {
     min-height: 5px;
-    background-color: #3b3b3b;
+    background-color: rgba(29, 42, 53, 0.7);
     border-radius: 10px;
     width: 200px;
     border: 3px solid #ffffff;

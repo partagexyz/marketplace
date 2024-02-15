@@ -37,19 +37,21 @@ const Howitworks = () => {
             <div
               key={index}
               className="col-lg-4 col-md-6 d-flex align-items-stretch"
+              data-aos="fade-up"
+              data-aos-delay="100"
             >
               <div className="card">
-                <div className="text-center card-img">
-                  <Image
-                    id="woksimg"
-                    src={item.imgSrc}
-                    className="card-img-top"
-                    alt={`Step ${index + 1}`}
-                  />
-                </div>
+                <Image
+                  src={item.imgSrc}
+                  style={{ height: "250px", width: "100%" }}
+                  className="card-img-top"
+                  alt={`Step ${index + 1}`}
+                />
 
                 <div className="card-body">
-                  <h5 className="card-title">{item.title}</h5>
+                  <h5 className="card-title">
+                    <a href="">{item.title}</a>
+                  </h5>
                   <p className="card-text">{item.description}</p>
                 </div>
               </div>
