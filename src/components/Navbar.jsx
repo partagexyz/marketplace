@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { initHeaderScrolled } from "../assets/js/headerScrolled";
+import { useMbWallet } from "@mintbase-js/react";
 
 const Navbar = ({ onClick }) => {
+  const { isConnected, connect, activeAccountId, disconnect } = useMbWallet();
+
   const [isMobileNavVisible, setMobileNavVisibility] = useState(false);
+
+  const truncatedAccountId = isConnected
+    ? `${activeAccountId.slice(0, 6)}...${activeAccountId.slice(-4)}`
+    : "";
 
   const toggleMobileNav = () => {
     setMobileNavVisibility(!isMobileNavVisible);
@@ -35,10 +42,7 @@ const Navbar = ({ onClick }) => {
           >
             <ul>
               <li>
-                <a
-                  className="nav-link scrollto"
-                  href="/marketplace"
-                >
+                <a className="nav-link scrollto" href="/marketplace">
                   Marketplace
                 </a>
               </li>
@@ -66,16 +70,31 @@ const Navbar = ({ onClick }) => {
                   White Paper
                 </a>
               </li>
-              <li>
-                <a onClick={onClick} className="getstarted scrollto">
-                  Connect Wallet
-                </a>
-              </li>
+
+              {isConnected ? (
+                <>
+                  <li>
+                    <a className="nav-link scrollto">{truncatedAccountId}</a>
+                  </li>
+
+                  <li>
+                    <a onClick={disconnect} className="getstarted scrollto">
+                      Disconnect Wallet
+                    </a>
+                  </li>
+                </>
+              ) : (
+                <li>
+                  <a onClick={connect} className="getstarted scrollto">
+                    Connect Wallet
+                  </a>
+                </li>
+              )}
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>
             <br></br>
           </nav>
-          {/* .navbar */}
+          {/* end .navbar */}
         </div>
       </header>
     </>

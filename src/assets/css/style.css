@@ -152,6 +152,7 @@ iframe {
 #header.header-scrolled,
 #header.header-inner-pages {
   background: rgba(21, 34, 43, 0.85);
+
   padding: 10px 0;
 }
 
