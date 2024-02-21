@@ -44,7 +44,7 @@ const Topcreators = () => {
               className="col-md-6 col-lg-3 d-flex align-items-stretch mb-3 mb-lg-0"
             >
               <div className="icon-box">
-                <a href="/provider">
+                <a href="/providerpage">
                   <div className="image-container">
                     <div id="circular-tag">
                       <span>{index + 1}</span>
@@ -55,7 +55,7 @@ const Topcreators = () => {
                   </div>
                   <div className="text-container">
                     <h4 className="title">
-                      <a href="/provider">{creator.name}</a>
+                      <a href="/providerpage">{creator.name}</a>
                     </h4>
                     <p className="description">
                       Total Sale: <span id="pricetag">{creator.totalSale}</span>
