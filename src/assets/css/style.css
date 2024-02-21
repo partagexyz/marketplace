@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# General
+# General 
 --------------------------------------------------------------*/
 /* 
 golbal colour:
@@ -1129,6 +1129,12 @@ section {
 
 .nftcollections .icon-box:hover .title a {
   color: #c5f801;
+}
+
+.nftcollections .command {
+  background: url("../img/command.png") top center;
+  background-size: cover;
+  position: relative;
 }
 #collecti {
   margin-top: 5px;
