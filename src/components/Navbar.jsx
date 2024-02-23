@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { initHeaderScrolled } from "../assets/js/headerScrolled";
 import { useMbWallet } from "@mintbase-js/react";
 
-const Navbar = ({ onClick }) => {
+const Navbar = () => {
   const { isConnected, connect, activeAccountId, disconnect } = useMbWallet();
+  const navigate = useNavigate();
 
   const [isMobileNavVisible, setMobileNavVisibility] = useState(false);
+  const [hasReloaded, setHasReloaded] = useState(false); // State to track if page has reloaded
 
   const truncatedAccountId = isConnected
     ? `${activeAccountId.slice(0, 6)}...${activeAccountId.slice(-4)}`
@@ -25,6 +28,30 @@ const Navbar = ({ onClick }) => {
       toggleMobileNav();
     });
   }, [isMobileNavVisible]);
+
+  useEffect(() => {
+    // Redirect to dashboard after wallet is connected
+    if (isConnected && !localStorage.getItem("walletConnected")) {
+      localStorage.setItem("walletConnected", "true");
+      navigate("/dashboard");
+      // if (!hasReloaded) {
+      //   setHasReloaded(true);
+      //   window.location.reload();
+      // }
+    }
+  }, [isConnected, navigate, hasReloaded]);
+
+  useEffect(() => {
+    // Redirect to home after wallet is disconnected
+    if (!isConnected && localStorage.getItem("walletConnected")) {
+      localStorage.removeItem("walletConnected");
+      navigate("/");
+      // if (!hasReloaded) {
+      //   setHasReloaded(true);
+      //   window.location.reload();
+      // }
+    }
+  }, [isConnected, navigate, hasReloaded]);
 
   return (
     <>

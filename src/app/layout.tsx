@@ -15,6 +15,8 @@ import "@/assets/vendor/swiper/swiper-bundle.min.css";
 
 import { MintbaseWalletContextProvider } from "@mintbase-js/react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import Header from "@/components/header";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -39,9 +41,11 @@ export default function RootLayout({
       <MintbaseWalletContextProvider {...MintbaseWalletSetup}>
         <html lang="en">
           <body className={inter.className}>
-            <Navbar onClick={undefined} />
-            <div className="min-h-screen">{children}</div>
-            <Footer />
+            <Router>
+              <Navbar />
+              <div className="min-h-screen">{children}</div>
+              <Footer />
+            </Router>
           </body>
         </html>
       </MintbaseWalletContextProvider>
