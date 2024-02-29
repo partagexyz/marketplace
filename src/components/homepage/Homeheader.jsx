@@ -1,5 +1,5 @@
 import React from "react";
-import partimg from "../../assets/img/partage-log.png";
+import partimg from "../../assets/img/partagelogo-no-bg.png";
 import Image from "next/image";
 
 const Marketplacehead = ({ onClick }) => {
@@ -12,11 +12,17 @@ const Marketplacehead = ({ onClick }) => {
           </div>
           <h1>PARTAGE</h1>
           <h2>Shared Utilities on Near</h2>
-          {/*<div className="d-flex">
-            <a onClick={onClick} className="btn-get-started scrollto">
-              <b>Connect Wallet</b>
+          <div className="markbut">
+            <a onClick={onClick} id="provfolbut">
+              <span>
+                <i
+                  className="bi-rocket-takeoff"
+                  style={{ marginLeft: "5px" }}
+                ></i>
+              </span>{" "}
+              Get Started
             </a>
-          </div>*/}
+          </div>
         </div>
       </section>
     </>

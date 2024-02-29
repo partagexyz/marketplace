@@ -72,22 +72,23 @@ const Morenft = () => {
                   <h5 className="card-title">
                     <a href="/details">{item.title}</a>
                   </h5>
-                  <p className="description">
+                  {/* <p className="description">
                     <Image src={item.image} id="collectionprofile" alt="..." />{" "}
                     <span id="pricetag">{item.profile}</span>
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="price-container">
-                  <span className="price left">
-                    <span style={{ color: "gray" }}>price</span>
+                  <Image src={item.image} id="collectionimgg" alt="..." />{" "}
+                  <div className="price left">
+                    <span style={{ color: "gray" }}>Creator</span>
                     <br></br>
                     <span id="pricetag">{item.price}</span>
-                  </span>
-                  <span className="price right">
+                  </div>
+                  <div className="price right">
                     <span style={{ color: "gray" }}>Highest Bid</span> <br></br>
                     <span id="pricetag">{item.highestbid}</span>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>

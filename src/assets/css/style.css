@@ -1000,6 +1000,7 @@ section {
 }
 
 .about-boxes .card {
+  padding: 5px;
   border-radius: 8px;
   border: 1px solid rgba(29, 42, 53, 0.7);
   background-color: rgba(29, 42, 53, 0.7);
@@ -1037,11 +1038,11 @@ section {
 }
 
 .about-boxes .card-title a {
-  color: #c0cad1;
+  color: #c5f801;
 }
 
 .about-boxes .card-title a:hover {
-  color: #c5f801;
+  color: #c0cad1;
 }
 
 .about-boxes .card-text {
@@ -1087,6 +1088,7 @@ section {
 
 .nftcollections .card {
   border-radius: 10px;
+  padding: 5px;
   border: 1px solid rgba(29, 42, 53, 0.7);
   margin-left: 20px;
   margin-right: 20px;
@@ -1125,6 +1127,7 @@ section {
 .nftcollections .card-img-top {
   height: 200px !important;
   width: 100% !important;
+  border-radius: 10px;
 }
 
 .nftcollections .icon-box:hover .title a {
@@ -1167,6 +1170,11 @@ section {
   width: 20px;
   border-radius: 50%;
 }
+#collectionimgg {
+  height: 50px;
+  width: 50px;
+  border-radius: 40%;
+}
 .price-container {
   display: flex;
   justify-content: space-between;
@@ -1179,6 +1187,8 @@ section {
 }
 
 .price.left {
+  padding-right: 20%;
+  text-align: left;
   order: 1;
 }
 
@@ -1513,6 +1523,7 @@ section {
 .marketplac .card-img-top {
   height: 200px !important;
   width: 100% !important;
+  border-radius: 10px;
 }
 
 .marketplac::before {
@@ -1533,6 +1544,7 @@ section {
 }
 
 .marketplac .card {
+  padding: 5px;
   border-radius: 10px;
   border: 1px solid rgba(29, 42, 53, 0.7);
   margin-left: 20px;
@@ -1568,6 +1580,20 @@ section {
 
 .marketplac .icon-box:hover .title a {
   color: #c5f801;
+}
+.marketplac .nfth {
+  color: whitesmoke;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid rgba(29, 42, 53, 0.7);
+  font-size: larger;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+.marketplac .nfth:hover {
+  background-color: #fb5700;
+  color: #000;
 }
 
 @media (max-width: 767px) {
