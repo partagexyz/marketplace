@@ -1133,8 +1133,11 @@ section {
 .nftcollections .icon-box:hover .title a {
   color: #c5f801;
 }
-
 .nftcollections .command {
+  border: 2px solid gray;
+}
+
+.nftcollections .command:hover {
   background: url("../img/command.png") top center;
   background-size: cover;
   position: relative;
@@ -1500,7 +1503,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# marketplacehead
+# marketplacehead 
 --------------------------------------------------------------*/
 
 .marketplacehead {

@@ -8,45 +8,45 @@ const Morenft = () => {
   const items = [
     {
       image: boxImage2,
-      price: "2.5 NEAR",
-      title: "Bob lane",
-      profile: "Sooshio",
-      highestbid: "4.5 NEAR",
+      price: "2.5 USDT",
+      nftname: "Bob lane",
+      ownername: "Sooshio",
+      mon_price: "4.5 USDT",
     },
     {
       image: boxImage2,
-      price: "3.0 NEAR",
-      title: "Bob lane",
-      profile: "Sooshio",
-      highestbid: "6.5 NEAR",
+      price: "3.0 USDT",
+      nftname: "Bob lane",
+      ownername: "Sooshio",
+      mon_price: "6.5 USDT",
     },
     {
       image: boxImage2,
-      price: "1.25 NEAR",
-      title: "Bob lane",
-      profile: "Sooshio",
-      highestbid: "7.2 NEAR",
+      price: "1.25 USDT",
+      nftname: "Bob lane",
+      ownername: "Sooshio",
+      mon_price: "7.2 USDT",
     },
     {
       image: boxImage2,
-      price: "6.8 NEAR",
-      title: "Bob lane",
-      profile: "Sooshio",
-      highestbid: "12.0 NEAR",
+      price: "6.8 USDT",
+      nftname: "Bob lane",
+      ownername: "Sooshio",
+      mon_price: "12.0 USDT",
     },
     {
       image: boxImage2,
-      price: "5.5 NEAR",
-      title: "Testoo moo",
-      profile: "moans",
-      highestbid: "6.3 NEAR",
+      price: "5.5 USDT",
+      nftname: "Testoo moo",
+      ownername: "moans",
+      mon_price: "6.3 USDT",
     },
     {
       image: boxImage2,
-      price: "1.45 NEAR",
-      title: "wdnwj joos",
-      profile: "gooad",
-      highestbid: "3.5 NEAR",
+      price: "1.45 USDT",
+      nftname: "wdnwj joos",
+      ownername: "gooad",
+      mon_price: "3.5 USDT",
     },
   ];
 
@@ -70,25 +70,25 @@ const Morenft = () => {
 
                 <div className="card-body">
                   <h5 className="card-title">
-                    <a href="/details">{item.title}</a>
+                    <a href="/details">{item.nftname}</a>
                   </h5>
-                  {/* <p className="description">
+                  <p className="description">
                     <Image src={item.image} id="collectionprofile" alt="..." />{" "}
-                    <span id="pricetag">{item.profile}</span>
-                  </p> */}
+                    <span id="pricetag">{item.ownername}</span>
+                  </p>
                 </div>
 
                 <div className="price-container">
-                  <Image src={item.image} id="collectionimgg" alt="..." />{" "}
-                  <div className="price left">
-                    <span style={{ color: "gray" }}>Creator</span>
+                  <span className="price left">
+                    <span style={{ color: "gray" }}>Daily Price</span>
                     <br></br>
                     <span id="pricetag">{item.price}</span>
-                  </div>
-                  <div className="price right">
-                    <span style={{ color: "gray" }}>Highest Bid</span> <br></br>
-                    <span id="pricetag">{item.highestbid}</span>
-                  </div>
+                  </span>
+                  <span className="price right">
+                    <span style={{ color: "gray" }}>Monthly Price </span>{" "}
+                    <br></br>
+                    <span id="pricetag">{item.mon_price}</span>
+                  </span>
                 </div>
               </div>
             </div>

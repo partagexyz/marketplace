@@ -67,9 +67,7 @@ const Description = () => {
                 </p>
               </div>
             </div>
-            <div
-              className="col-lg-6 col-md-6 pt-4 pt-lg-0 order-2 order-lg-2 content"
-            >
+            <div className="col-lg-6 col-md-6 pt-4 pt-lg-0 order-2 order-lg-2 content">
               <h3>00 : 00 : 00</h3>
 
               <div className="card">
@@ -86,13 +84,14 @@ const Description = () => {
                 </div>
                 <div className="price-container">
                   <span className="price left">
-                    <span style={{ color: "gray" }}>price</span>
+                    <span style={{ color: "gray" }}>Daily Price</span>
                     <br></br>
-                    <span id="pricetag">2.46 NEAR</span>
+                    <span id="pricetag">2.46 USDT</span>
                   </span>
                   <span className="price right">
-                    <span style={{ color: "gray" }}>Highest Bid</span> <br></br>
-                    <span id="pricetag">4.76 NEAR</span>
+                    <span style={{ color: "gray" }}>Montly Price</span>{" "}
+                    <br></br>
+                    <span id="pricetag">4.76 USDT</span>
                   </span>
                 </div>
               </div>

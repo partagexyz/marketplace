@@ -8,18 +8,18 @@ import Image from "next/image";
 
 const Topcreators = () => {
   const topCreators = [
-    { name: "Magni Dolores", totalSale: "00.00 Near" },
-    { name: "John Doe", totalSale: "10.00 Near" },
-    { name: "Jane Smith", totalSale: "5.00 Near" },
-    { name: "Jane Smith", totalSale: "5.00 Near" },
-    { name: "Jane Smith", totalSale: "5.00 Near" },
-    { name: "Jane Smith", totalSale: "5.00 Near" },
-    { name: "Jane Smith", totalSale: "5.00 Near" },
-    { name: "Bob sidhfxsjc", totalSale: "20.00 Near" },
-    { name: "Bob Johnson", totalSale: "20.00 Near" },
-    { name: "Bob Johnson", totalSale: "20.00 Near" },
-    { name: "Bob Johnson", totalSale: "20.00 Near" },
-    { name: "Bob Johnson", totalSale: "20.00 Near" },
+    { name: "Magni Dolores", totalSale: "00.00 USDT" },
+    { name: "John Doe", totalSale: "10.00 USDT" },
+    { name: "Jane Smith", totalSale: "5.00 USDT" },
+    { name: "Jane Smith", totalSale: "5.00 USDT" },
+    { name: "Jane Smith", totalSale: "5.00 USDT" },
+    { name: "Jane Smith", totalSale: "5.00 USDT" },
+    { name: "Jane Smith", totalSale: "5.00 USDT" },
+    { name: "Bob sidhfxsjc", totalSale: "20.00 USDT" },
+    { name: "Bob Johnson", totalSale: "20.00 USDT" },
+    { name: "Bob Johnson", totalSale: "20.00 USDT" },
+    { name: "Bob Johnson", totalSale: "20.00 USDT" },
+    { name: "Bob Johnson", totalSale: "20.00 USDT" },
   ];
 
   return (

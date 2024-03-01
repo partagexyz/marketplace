@@ -37,45 +37,45 @@ const Mydata = () => {
   const items = [
     {
       image: boxImage2,
-      price: "2.5 NEAR",
+      price: "2.5 USDT",
       title: "Bob lane",
       profile: "Sooshio",
-      highestbid: "4.5 NEAR",
+      highestbid: "4.5 USDT",
     },
     {
       image: boxImage2,
-      price: "3.0 NEAR",
+      price: "3.0 USDT",
       title: "Bob lane",
       profile: "Sooshio",
-      highestbid: "6.5 NEAR",
+      highestbid: "6.5 USDT",
     },
     {
       image: boxImage2,
-      price: "1.25 NEAR",
+      price: "1.25 USDT",
       title: "Bob lane",
       profile: "Sooshio",
-      highestbid: "7.2 NEAR",
+      highestbid: "7.2 USDT",
     },
     {
       image: boxImage2,
-      price: "6.8 NEAR",
+      price: "6.8 USDT",
       title: "Bob lane",
       profile: "Sooshio",
-      highestbid: "12.0 NEAR",
+      highestbid: "12.0 USDT",
     },
     {
       image: boxImage2,
-      price: "5.5 NEAR",
+      price: "5.5 USDT",
       title: "Testoo moo",
       profile: "moans",
-      highestbid: "6.3 NEAR",
+      highestbid: "6.3 USDT",
     },
     {
       image: boxImage2,
-      price: "1.45 NEAR",
+      price: "1.45 USDT",
       title: "wdnwj joos",
       profile: "gooad",
-      highestbid: "3.5 NEAR",
+      highestbid: "3.5 USDT",
     },
   ];
 
@@ -118,12 +118,12 @@ const Mydata = () => {
 
                   <div className="price-container">
                     <span className="price left">
-                      <span style={{ color: "gray" }}>price</span>
+                      <span style={{ color: "gray" }}>Daily price</span>
                       <br></br>
                       <span id="pricetag">{item.price}</span>
                     </span>
                     <span className="price right">
-                      <span style={{ color: "gray" }}>Highest Bid</span>{" "}
+                      <span style={{ color: "gray" }}>Montly Price</span>{" "}
                       <br></br>
                       <span id="pricetag">{item.highestbid}</span>
                     </span>
@@ -200,6 +200,7 @@ const Mydata = () => {
                     minWidth: "100%",
                     marginLeft: "0px",
                     marginRight: "0px",
+                    cursor: "pointer",
                   }}
                 >
                   <div className="card-body">

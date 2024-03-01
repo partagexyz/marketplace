@@ -81,13 +81,10 @@ const Nft = () => {
           <span className="nfth">Music</span>
         </div>
         <br></br>
-        <section id="nftcollections" className="nftcollections">
+        <section id="marketplac" className="marketplac">
           <div className="container">
-            <div className="section-title">
-              <p>More from this Creator</p>
-            </div>
-
-            <div className="row icon-boxes">
+            <div className="row">
+              {/* using this div and uncommenting the css tyle for this (.marketplac .icon-boxes) makes the card overflow <div className="row icon-boxes"> */}
               {items.map((item, index) => (
                 <div
                   key={index}
@@ -106,20 +103,14 @@ const Nft = () => {
                       <h5 className="card-title">
                         <a href="/details">{item.title}</a>
                       </h5>
-                    </div>
-
-                    <div className="price-container">
-                      <Image src={item.image} id="collectionimgg" alt="..." />{" "}
-                      <div className="price left">
-                        <span style={{ color: "gray" }}>Creator</span>
-                        <br></br>
-                        <span id="pricetag">{item.price}</span>
-                      </div>
-                      <div className="price right">
-                        <span style={{ color: "gray" }}>Highest Bid</span>{" "}
-                        <br></br>
-                        <span id="pricetag">{item.highestbid}</span>
-                      </div>
+                      <p className="description">
+                        <Image
+                          src={item.image}
+                          id="collectionprofile"
+                          alt="..."
+                        />{" "}
+                        <span id="pricetag">{item.profile}</span>
+                      </p>
                     </div>
                   </div>
                 </div>
