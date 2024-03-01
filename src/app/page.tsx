@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Homeheader onClick={undefined} />
+      <Homeheader />
       <Howitworks />
       <Topcreators />
       <Nftcollections />

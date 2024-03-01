@@ -13,7 +13,7 @@ const Marketplacehead = () => {
             <Image src={partimg} id="partimg" alt="..." />
           </div>
           <h1>PARTAGE</h1>
-          <h2>Shared Utilities on Near</h2>
+          <h2>Keyless Solutions <br></br> Seamless Sharing</h2>
           <div className="markbut">
             <a className="scrollto" href="#about-boxes" id="provfolbut">
               <span>
