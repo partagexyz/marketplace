@@ -2,7 +2,7 @@ import React from "react";
 import partimg from "../../assets/img/partagelogo-no-bg.png";
 import Image from "next/image";
 
-const Marketplacehead = ({ connect }) => {
+const Marketplacehead = () => {
   return (
     <>
       <section id="hero">
