@@ -8,11 +8,6 @@ const Navbar = () => {
   // const navigate = useNavigate();
 
   const [isMobileNavVisible, setMobileNavVisibility] = useState(false);
-  const [hasReloaded, setHasReloaded] = useState(false); // State to track if page has reloaded
-
-  const truncatedAccountId = isConnected
-    ? `${activeAccountId.slice(0, 6)}...${activeAccountId.slice(-4)}`
-    : "";
 
   const toggleMobileNav = () => {
     setMobileNavVisibility(!isMobileNavVisible);
@@ -69,14 +64,9 @@ const Navbar = () => {
           >
             <ul>
               <li>
-                <a className="nav-link scrollto" href="/marketplace">
-                  Marketplace
-                </a>
-              </li>
-              <li>
                 <a
                   className="nav-link scrollto"
-                  href="https://shop.hellopartage.xyz"
+                  href="https://shop.hellopartage.xyz/products/keyless-partage-lock"
                 >
                   Shop
                 </a>
@@ -84,26 +74,24 @@ const Navbar = () => {
               <li>
                 <a
                   className="nav-link scrollto"
-                  href="https://app.hellopartage.xyz"
+                  href="https://hellopartage.xyz/apk/PartageLock.apk"
+                  target="_blank"
                 >
                   App
                 </a>
               </li>
               <li>
-                <a
-                  className="nav-link scrollto"
-                  href="https://medium.com/partagexyz/partage-white-paper-v2-c0cbea46e2f8"
-                >
-                  White Paper
+                <a className="nav-link scrollto" href="/marketplace">
+                  Marketplace
                 </a>
               </li>
-
               {isConnected ? (
                 <>
                   <li>
-                    <a className="nav-link scrollto">{truncatedAccountId}</a>
+                    <a className="nav-link scrollto" href="/dashboard">
+                      Dashboard
+                    </a>
                   </li>
-
                   <li>
                     <a onClick={disconnect} className="getstarted scrollto">
                       Disconnect Wallet
@@ -121,7 +109,6 @@ const Navbar = () => {
             <i className="bi bi-list mobile-nav-toggle"></i>
             <br></br>
           </nav>
-          {/* end .navbar */}
         </div>
       </header>
     </>

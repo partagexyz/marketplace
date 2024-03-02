@@ -10,7 +10,7 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6">
                 <div className="footer-info">
                   <h3>PARTAGE</h3>
-                  <p>Shared Utilities on Near</p>
+                  <p>Keyless Solutions for Seamless Sharing</p>
                   <div className="social-links mt-3">
                     <a href="#" className="twitter">
                       <i className="bx bxl-twitter"></i>
@@ -42,11 +42,15 @@ const Footer = () => {
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">White Paper</a>
+                    <a href="/dashboard">Dashboard</a>
                   </li>
                   <li>
                     <i className="bx bx-chevron-right"></i>{" "}
-                    <a href="#">Tutorials</a>
+                    <a href="https://medium.com/partagexyz/partage-white-paper-v2-c0cbea46e2f8">White Paper</a>
+                  </li>
+                  <li>
+                    <i className="bx bx-chevron-right"></i>{" "}
+                    <a href="https://medium.com/partagexyz">Blog</a>
                   </li>
                 </ul>
               </div>
@@ -65,11 +69,11 @@ const Footer = () => {
 
         <div className="container">
           <div className="copyright">
-            &copy; Copyright{" "}
+            &copy; All rights reserved{" "}
             <strong>
               <span>CivicTech OÜ, 2024</span>
             </strong>
-            . All Rights Reserved
+            .
           </div>
         </div>
       </footer>

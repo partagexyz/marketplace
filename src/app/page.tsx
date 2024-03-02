@@ -6,8 +6,8 @@ import Nftcollections from "@/components/homepage/Nftcollections";
 import Topcreators from "@/components/homepage/Topcreators";
 
 export const metadata: Metadata = {
-  title: "Partage Marketplace",
-  description: "Welcome to partage Marketplace",
+  title: "Partage",
+  description: "p2p sharing network for nomads",
 };
 
 export default function Home() {

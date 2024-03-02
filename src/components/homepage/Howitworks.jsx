@@ -17,21 +17,21 @@ const Howitworks = () => {
           {[
             {
               imgSrc: boxImage1,
-              title: "Purchase your Lock",
+              title: "Purchase A Lock",
               description:
-                "Secure your peace of mind today, and get a compatible lock from our shop.",
+                "Buy a Partage Lock and generate a profit by selling temporary access to your underused assets. ",
             },
             {
               imgSrc: boxImage2,
-              title: "Try our App",
+              title: "Try The App",
               description:
-                "Stay connected on the go, and try our app for seamless access to a world of exclusive features at your fingertips.",
+                "Download the App to unlock items from our global network of owners sharing access to their belongings. ",
             },
             {
               imgSrc: boxImage3,
-              title: "Connect your wallet",
+              title: "Scroll Our Marketplace",
               description:
-                "Experience the full potential of Partage by connecting your wallet for instant access to your user dahsboard.",
+                "Connect your wallet to experience the full potential of our marketplace with your user dashboard.",
             },
           ].map((item, index) => (
             <div
