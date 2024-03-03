@@ -40,9 +40,11 @@ export default function RootLayout({
       <MintbaseWalletContextProvider {...MintbaseWalletSetup}>
         <html lang="en">
           <body className={inter.className}>
+            <div className="min-h-screen">
               <Navbar />
-              <div className="min-h-screen">{children}</div>
+              {children}
               <Footer />
+            </div>
           </body>
         </html>
       </MintbaseWalletContextProvider>
