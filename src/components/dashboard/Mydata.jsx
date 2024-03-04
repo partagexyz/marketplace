@@ -1,37 +1,35 @@
 import React from "react";
-import boxImage1 from "../../assets/img/connect-wallet.jpg";
 import boxImage2 from "../../assets/img/send-payment.jpg";
-import boxImage3 from "../../assets/img/receive-password.jpg";
 import Image from "next/image";
 
 const Mydata = () => {
   const commands = [
     {
-      commandname: "LIST NFT",
+      commandname: "ACTIVATE LOCK",
     },
     {
-      commandname: "UNLIST NFT",
+      commandname: "DEACTIVATE LOCK",
     },
     {
-      commandname: "TRANSFER NFT",
+      commandname: "REGISTER ITEM",
     },
     {
-      commandname: "TRANSFER FRACTIONS",
+      commandname: "UPDATE ITEM",
     },
     {
-      commandname: "FRACTIONALISE NFT",
+      commandname: "LIST ITEM",
     },
     {
-      commandname: "UNLIST FRACTIONS",
+      commandname: "UNLIST ITEM",
     },
     {
-      commandname: "BURN FRACTIONS",
+      commandname: "GENERATE ACCESS",
     },
     {
-      commandname: "GET BALANCE",
+      commandname: "REVOKE ACCESS",
     },
     {
-      commandname: "GET TOTAL SUPPLY",
+      commandname: "UPDATE PROFILE",
     },
   ];
   const items = [
@@ -154,7 +152,7 @@ const Mydata = () => {
                     <a href="/details">Mainnet:</a>
                     <br></br>
                     <span id="pricetag">
-                      SP2NC54N30J95AHB55W6VY3MFF9X4G07F4XFENMY51{" "}
+                    partage-lock.near {" "}
                     </span>
                   </h5>
                 </div>
@@ -174,7 +172,7 @@ const Mydata = () => {
                     <a href="/details">Testnet:</a>
                     <br></br>
                     <span id="pricetag">
-                      ST2NC54N30J95AHB55W6VY3MF9X4G07F4XCPVYKGD{" "}
+                    partage-lock.testnet {" "}
                     </span>
                   </h5>
                 </div>
