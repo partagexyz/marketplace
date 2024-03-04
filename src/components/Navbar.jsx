@@ -75,7 +75,6 @@ const Navbar = () => {
                 <a
                   className="getstarted scrollto"
                   href="https://hellopartage.xyz/apk/PartageLock.apk"
-                  target="_blank"
                 >
                   Download App
                 </a>
