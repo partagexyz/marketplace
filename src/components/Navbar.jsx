@@ -73,11 +73,11 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  className="nav-link scrollto"
+                  className="getstarted scrollto"
                   href="https://hellopartage.xyz/apk/PartageLock.apk"
                   target="_blank"
                 >
-                  App
+                  Download App
                 </a>
               </li>
               <li>
