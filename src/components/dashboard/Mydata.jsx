@@ -54,27 +54,6 @@ const Mydata = () => {
       profile: "Sooshio",
       highestbid: "7.2 USDT",
     },
-    {
-      image: boxImage2,
-      price: "6.8 USDT",
-      title: "Bob lane",
-      profile: "Sooshio",
-      highestbid: "12.0 USDT",
-    },
-    {
-      image: boxImage2,
-      price: "5.5 USDT",
-      title: "Testoo moo",
-      profile: "moans",
-      highestbid: "6.3 USDT",
-    },
-    {
-      image: boxImage2,
-      price: "1.45 USDT",
-      title: "wdnwj joos",
-      profile: "gooad",
-      highestbid: "3.5 USDT",
-    },
   ];
 
   return (

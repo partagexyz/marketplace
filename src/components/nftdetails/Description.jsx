@@ -1,9 +1,25 @@
+"use client";
+
 import React from "react";
 import joinimg from "../../assets/img/partabout.png";
-import boxImage2 from "../../assets/img/partabout.png";
 import Image from "next/image";
 
+import { useState } from "react";
+import BuyModal from "../BuyModal/BuyModal";
+
 const Description = () => {
+  const [showBuyModal, setShowBuyModal] = useState(false);
+
+  const handleBuyClick = () => {
+    // open the BuyModal when the "BUY" button is clicked
+    setShowBuyModal(true);
+  };
+
+  const handleCloseBuyModal = () => {
+    // close the BuyModal
+    setShowBuyModal(false);
+  };
+
   return (
     <>
       <section id="nftdetails" className="nftdetails">
@@ -95,13 +111,15 @@ const Description = () => {
                   </span>
                 </div>
               </div>
-              <a id="provbut" class="full-width-button">
+              <a id="provbut" class="full-width-button" onClick={handleBuyClick}>
                 BUY
               </a>
             </div>
           </div>
         </div>
       </section>
+      {/* Render BuyModal */}
+      {showBuyModal && <BuyModal closeModal={handleCloseBuyModal} />}
     </>
   );
 };
