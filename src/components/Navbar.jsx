@@ -17,7 +17,7 @@ const Navbar = () => {
     initHeaderScrolled();
 
     const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
-    const navbar = document.querySelector("#navbar");
+    //const navbar = document.querySelector("#navbar");
 
     mobileNavToggle.addEventListener("click", () => {
       toggleMobileNav();
