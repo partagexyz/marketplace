@@ -4,6 +4,8 @@ import Howitworks from "@/components/homepage/Howitworks";
 import Join from "@/components/homepage/Join";
 import Nftcollections from "@/components/homepage/Nftcollections";
 import Topcreators from "@/components/homepage/Topcreators";
+import Shared from "@/components/homepage/Shared";
+import Productprev from "@/components/homepage/Productprev";
 
 export const metadata: Metadata = {
   title: "Partage",
@@ -15,7 +17,9 @@ export default function Home() {
     <>
       <Homeheader />
       <Howitworks />
+      <Shared />
       <Topcreators />
+      <Productprev />
       <Nftcollections />
       <Join />
     </>
