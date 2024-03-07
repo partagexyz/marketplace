@@ -1,7 +1,4 @@
 import React from "react";
-import joinimg from "../../assets/img/partabout.png";
-import boxImage2 from "../../assets/img/partabout.png";
-import Image from "next/image";
 
 const Description = () => {
   return (

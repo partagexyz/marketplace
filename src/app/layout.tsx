@@ -18,8 +18,8 @@ import { MintbaseWalletContextProvider } from "@mintbase-js/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { mbjs } from "@mintbase-js/sdk";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar.jsx";
+import Footer from "@/components/layout/Footer.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 

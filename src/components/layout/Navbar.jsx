@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
-import { initHeaderScrolled } from "../assets/js/headerScrolled";
+import { initHeaderScrolled } from "../../assets/js/headerScrolled";
 import { useMbWallet } from "@mintbase-js/react";
 
 const Navbar = () => {

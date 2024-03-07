@@ -1,7 +1,5 @@
 import React from "react";
-import boxImage1 from "../../assets/img/connect-wallet.jpg";
 import boxImage2 from "../../assets/img/send-payment.jpg";
-import boxImage3 from "../../assets/img/receive-password.jpg";
 import Image from "next/image";
 
 const Morenft = () => {
@@ -26,27 +24,6 @@ const Morenft = () => {
       nftname: "Bob lane",
       ownername: "Sooshio",
       mon_price: "7.2 USDT",
-    },
-    {
-      image: boxImage2,
-      price: "6.8 USDT",
-      nftname: "Bob lane",
-      ownername: "Sooshio",
-      mon_price: "12.0 USDT",
-    },
-    {
-      image: boxImage2,
-      price: "5.5 USDT",
-      nftname: "Testoo moo",
-      ownername: "moans",
-      mon_price: "6.3 USDT",
-    },
-    {
-      image: boxImage2,
-      price: "1.45 USDT",
-      nftname: "wdnwj joos",
-      ownername: "gooad",
-      mon_price: "3.5 USDT",
     },
   ];
 
