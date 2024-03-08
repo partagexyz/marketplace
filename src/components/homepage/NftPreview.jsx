@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { LoadingItem } from '../nftdetail/Item';
+import { Item, LoadingItem } from '../nftdetail/Item';
 import { useStoreNfts } from '../../hooks/useStoreNfts';
-import { parseMedia } from "../../utils";
-import { getCachedImage } from "../../utils/getCachedImages";
 
 const NftPreview = () => {
   const { nftsData, loading } = useStoreNfts('');
@@ -46,13 +43,7 @@ const NftPreview = () => {
               >
                 <div className="card">
                   <a href="/details">
-                    <Image
-                      src={getCachedImage(parseMedia(item.media))}
-                      className="card-img-top"
-                      alt="..."
-                      width={300}
-                      height={200}
-                    />
+                    <Item item={item} />
                   </a>
                   <div className="card-body">
                     <h5 className="card-title">
