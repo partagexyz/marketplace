@@ -63,7 +63,7 @@ const Navbar = () => {
               {isConnected ? (
                 <>
                   <li>
-                    <a className="getstarted scrollto" href="/dashboard">
+                    <a className="nav-link scrollto" href="/dashboard">
                       Dashboard
                     </a>
                   </li>
