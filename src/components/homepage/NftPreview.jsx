@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Item, LoadingItem } from '../nftdetail/Item';
-import { useStoreNfts } from '../../hooks/useStoreNfts';
+import { Item, LoadingItem } from "../nftdetail/Item";
+import { useStoreNfts } from "../../hooks/useStoreNfts";
 
 const NftPreview = () => {
-  const { nftsData, loading } = useStoreNfts('');
+  const { nftsData, loading } = useStoreNfts("");
 
   // State to hold three random items
   const [randomItems, setRandomItems] = useState([]);
@@ -22,7 +22,6 @@ const NftPreview = () => {
 
     getRandomItems();
   }, [loading, nftsData]);
-
 
   return (
     <section id="nftcollections" className="nftcollections">
@@ -42,14 +41,20 @@ const NftPreview = () => {
                 className="col-lg-4 col-md-6 d-flex align-items-stretch"
               >
                 <div className="card">
-                  <a href="/details">
+                  <a href="/nftdetail">
                     <Item item={item} />
                   </a>
+
                   <div className="card-body">
                     <h5 className="card-title">
-                      <a href="/details">{item.title}</a>
+                      <a href="/nftdetail">{item.title}</a>
                     </h5>
-                    <p className="description">{(item.price? (item.price/1000000).toString() : "0")} USDt</p>
+                    <p className="description">
+                      <span id="pricetag">
+                        {item.price ? (item.price / 1000000).toString() : "0"}{" "}
+                        USDT
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>

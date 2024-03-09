@@ -2,6 +2,7 @@ import { StoreNftsData } from "@mintbase-js/data/lib/api/storeNfts/storeNfts.typ
 import { SelectedNft } from "../../types/types";
 import { parseMedia } from "../../utils";
 import { getCachedImage } from "../../utils/getCachedImages";
+import Image from "next/image";
 
 function Item({
   item,
@@ -13,32 +14,27 @@ function Item({
   if (!item) {
     return <></>;
   }
-  
+
   const { mediaUrl } = parseMedia(item.media, item.base_uri);
 
   return (
-    <div
-      className="p-2 bg-black bg-opacity-10 hover:bg-opacity-20 transition-all duration-300 rounded-xl shadow-xl cursor-pointer"
-      onClick={() => showModal({ metadataId: item.metadata_id })}
-    >
-          <div className="w-full relative">
-            {mediaUrl ? (
-              <img
-                src={getCachedImage(mediaUrl)}
-                alt={item.title}
-                className="rounded-md w-full h-64 object-cover"
-              />
-            ) : (
-              <div className="w-full h-72 mb-10 flex justify-center items-center">
-                {" "}
-                No Nft Media Available
-              </div>
-            )}
-          </div>
-          <div className="flex flex-col mt-2">
+    <div onClick={() => showModal({ metadataId: item.metadata_id })}>
+      {mediaUrl ? (
+        <img
+          src={getCachedImage(mediaUrl)}
+          alt={item.title}
+          className="card-img-top"
+        />
+      ) : (
+        <span> No Nft Media Available</span>
+      )}
+
+      {/* <div className="flex flex-col mt-2">
         <div className="font-semibold text-md">{item.title}</div>
-        <div className="text-xs">{(item.price? (item.price/1000000).toString() : "0")} USDt</div>
-      </div>
+        <div className="text-xs">
+          {item.price ? (item.price / 1000000).toString() : "0"} USDt
+        </div>
+      </div> */}
     </div>
   );
 }
