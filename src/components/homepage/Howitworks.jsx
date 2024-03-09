@@ -19,19 +19,19 @@ const Howitworks = () => {
               imgSrc: boxImage1,
               title: "Purchase A Lock",
               description:
-                "Buy a Partage Lock and generate a profit by selling temporary access to your underused assets. ",
+                "Buy a Partage Lock from our shop and register it on our marketplace to share access to your underused assets. ",
             },
             {
               imgSrc: boxImage2,
               title: "Try The App",
               description:
-                "Download the App to unlock items from our global network of owners sharing access to their belongings. ",
+                "Download the App to unlock access to shared items from our peer-to-peer sharing network of real-world properties. ",
             },
             {
               imgSrc: boxImage3,
               title: "Scroll Our Marketplace",
               description:
-                "Connect your wallet to experience the full potential of our marketplace with your user dashboard.",
+                "Connect your wallet to experience the full journey into our marketplace with your user dashboard.",
             },
           ].map((item, index) => (
             <div

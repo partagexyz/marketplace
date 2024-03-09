@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { useMbWallet } from "@mintbase-js/react";
 import { FinalExecutionOutcome, TransactionSuccessEnum, buy, execute } from "@mintbase-js/sdk";
 import {
@@ -14,7 +15,6 @@ The component that handles the NFT Buy Information
 */
 
 import { nearToYocto } from "@/utils/numbers";
-import { useState } from "react";
 import { MAINNET_CONFIG } from "../../config/constants";
 import { useNearPrice } from "../../hooks/useNearPrice";
 import { TokenListData } from "../../types/types";

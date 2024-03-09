@@ -1,8 +1,7 @@
-import { EIconName, MbThingCard } from "mintbase-ui";
-import { SelectedNft } from "../types/types";
-import { parseMedia } from "../utils";
-import { getCachedImage } from "../utils/getCachedImages";
 import { StoreNftsData } from "@mintbase-js/data/lib/api/storeNfts/storeNfts.types";
+import { SelectedNft } from "../../types/types";
+import { parseMedia } from "../../utils";
+import { getCachedImage } from "../../utils/getCachedImages";
 
 function Item({
   item,
@@ -11,18 +10,23 @@ function Item({
   item: StoreNftsData;
   showModal: (item: SelectedNft) => void;
 }): JSX.Element {
+  if (!item) {
+    return <></>;
+  }
+  
   const { mediaUrl } = parseMedia(item.media, item.base_uri);
 
   return (
-    <MbThingCard
-      cardInfo={{
-        centerElement: (
-          <div className="w-full relative object-cover">
+    <div
+      className="p-2 bg-black bg-opacity-10 hover:bg-opacity-20 transition-all duration-300 rounded-xl shadow-xl cursor-pointer"
+      onClick={() => showModal({ metadataId: item.metadata_id })}
+    >
+          <div className="w-full relative">
             {mediaUrl ? (
               <img
                 src={getCachedImage(mediaUrl)}
                 alt={item.title}
-                className="rounded"
+                className="rounded-md w-full h-64 object-cover"
               />
             ) : (
               <div className="w-full h-72 mb-10 flex justify-center items-center">
@@ -31,13 +35,11 @@ function Item({
               </div>
             )}
           </div>
-        ),
-        midLeftText: item.title,
-        midRightText: "",
-        botRightIcon: EIconName.NONE,
-        onCenterElementClick: () => showModal({ metadataId: item.metadata_id }),
-      }}
-    />
+          <div className="flex flex-col mt-2">
+        <div className="font-semibold text-md">{item.title}</div>
+        <div className="text-xs">{(item.price? (item.price/1000000).toString() : "0")} USDt</div>
+      </div>
+    </div>
   );
 }
 

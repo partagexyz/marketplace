@@ -15,21 +15,22 @@ const Productprev = () => {
                 <div className="text-left">
                   <h1
                     style={{
-                      color: "#c5f801",
+                      color: "white",
+                      paddingTop: "60px",
+                      fontWeight: "bolder",
                     }}
                   >
-                    Purchase Lock
+                    Partage Lock
                   </h1>
-                  <h5 style={{ color: "whitesmoke" }}>$149.99</h5>
                 </div>
                 <p className="card-text">
                   Partage flagship innovation, the Partage Lock, is a versatile
                   hardware device that can be affixed to any object, granting
                   secure access via our blockchain-powered platform.
                 </p>
-                <div style={{ marginRight: "20%" }} className="markbut">
-                  <a className="scrollto" href="#about-boxes" id="provfolbut">
-                    Download App
+                <div style={{ marginRight: "20%", paddingTop: "20px", }} className="markbut">
+                  <a className="scrollto" href="https://shop.hellopartage.xyz/products/keyless-partage-lock" id="provfolbut">
+                    Visit Shop
                   </a>
                 </div>
               </div>
@@ -51,7 +52,9 @@ const Productprev = () => {
                 <div className="text-left">
                   <h1
                     style={{
-                      color: "#c5f801",
+                      color: "white",
+                      paddingTop: "60px",
+                      fontWeight: "bolder",
                     }}
                   >
                     Key Features:

@@ -24,7 +24,7 @@ const Shared = () => {
                 style={{ marginLeft: "20%", marginRight: "20%" }}
                 className="markbut"
               >
-                <a className="scrollto" href="#about-boxes" id="provfolbut">
+                <a className="scrollto" href="/app" id="provfolbut">
                   Download App
                 </a>
               </div>

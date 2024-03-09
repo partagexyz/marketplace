@@ -6,10 +6,10 @@ import {
   MbTab,
 } from 'mintbase-ui';
 import { useState } from 'react';
-import { useStoreData } from '../hooks/useStoreData';
-import { useStoreNfts } from '../hooks/useStoreNfts';
-import { SelectedNft, Store } from '../types/types';
-import { Item, LoadingItem } from './Item';
+import { useStoreData } from '../../hooks/useStoreData';
+import { useStoreNfts } from '../../hooks/useStoreNfts';
+import { SelectedNft, Store } from '../../types/types';
+import { Item, LoadingItem } from '../nftdetail/Item';
 import { StoreNftsData } from '@mintbase-js/data/lib/api/storeNfts/storeNfts.types';
 
 function Items({
