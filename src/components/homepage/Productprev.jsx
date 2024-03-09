@@ -28,8 +28,15 @@ const Productprev = () => {
                   hardware device that can be affixed to any object, granting
                   secure access via our blockchain-powered platform.
                 </p>
-                <div style={{ marginRight: "20%", paddingTop: "20px", }} className="markbut">
-                  <a className="scrollto" href="https://shop.hellopartage.xyz/products/keyless-partage-lock" id="provfolbut">
+                <div
+                  style={{ marginRight: "20%", paddingTop: "20px" }}
+                  className="markbut"
+                >
+                  <a
+                    className="scrollto"
+                    href="https://shop.hellopartage.xyz/products/keyless-partage-lock"
+                    id="provfolbut"
+                  >
                     Visit Shop
                   </a>
                 </div>
@@ -40,7 +47,7 @@ const Productprev = () => {
             <div className="card" style={{ borderRadius: "30%" }}>
               <Image
                 src={partwork1}
-                style={{ height: "300px", width: "100%", borderRadius: "30%" }}
+                style={{ height: "100%", width: "100%", borderRadius: "30%" }}
                 className="card-img-top"
                 alt=""
               />
@@ -53,7 +60,7 @@ const Productprev = () => {
                   <h1
                     style={{
                       color: "white",
-                      paddingTop: "60px",
+                      paddingTop: "10px",
                       fontWeight: "bolder",
                     }}
                   >
