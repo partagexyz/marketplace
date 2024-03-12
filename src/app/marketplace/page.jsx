@@ -22,14 +22,12 @@ const Marketplace = () => {
   return (
     <main>
       <Marketplacehead />
-      <div className="flex w-full">
-        <Items showModal={handleOpenBuyModal} />
-      </div>
-      <div className="mx-24 mt-4">
-        {!!showBuyModal && (
-          <BuyModal closeModal={handleCloseBuyModal} item={selectedItem} />
-        )}
-      </div>
+
+      <Items showModal={handleOpenBuyModal} />
+
+      {!!showBuyModal && (
+        <BuyModal closeModal={handleCloseBuyModal} item={selectedItem} />
+      )}
     </main>
   );
 };

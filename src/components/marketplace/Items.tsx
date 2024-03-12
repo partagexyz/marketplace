@@ -4,21 +4,21 @@ import {
   MbIcon,
   MbMenuWrapper,
   MbTab,
-} from 'mintbase-ui';
-import { useState } from 'react';
-import { useStoreData } from '../../hooks/useStoreData';
-import { useStoreNfts } from '../../hooks/useStoreNfts';
-import { SelectedNft, Store } from '../../types/types';
-import { Item, LoadingItem } from '../nftdetail/Item';
-import { StoreNftsData } from '@mintbase-js/data/lib/api/storeNfts/storeNfts.types';
+} from "mintbase-ui";
+import { useState } from "react";
+import { useStoreData } from "../../hooks/useStoreData";
+import { useStoreNfts } from "../../hooks/useStoreNfts";
+import { SelectedNft, Store } from "../../types/types";
+import { Item, LoadingItem } from "./item";
+import { StoreNftsData } from "@mintbase-js/data/lib/api/storeNfts/storeNfts.types";
 
 function Items({
   showModal,
 }: {
-  showModal: (item: SelectedNft) => void
+  showModal: (item: SelectedNft) => void;
 }): JSX.Element {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedStore, setSelectedStore] = useState('');
+  const [selectedStore, setSelectedStore] = useState("");
 
   const { nftsData, loading } = useStoreNfts(selectedStore);
   const { stores } = useStoreData();
@@ -32,65 +32,85 @@ function Items({
   // add 'all stores' to the beginning of the dropdown menu
   storeTabs?.unshift({
     content: <span>All Stores</span>,
-    onClick: () => setSelectedStore(''),
+    onClick: () => setSelectedStore(""),
   });
 
   return (
-    <div className="w-full items-center p-12">
-      <div className="flex w-full gap-4 items-center justify-end">
-        <MbMenuWrapper setIsOpen={setMenuOpen}>
-          <div
-            onClick={() => setMenuOpen(!menuOpen)}
-            onKeyDown={() => setMenuOpen(!menuOpen)}
-            role="button"
-            tabIndex={-1}
-          >
-            <MbTab
-              label={(
-                <div className="flex space-x-8 items-center">
-                  <span>
-                    {selectedStore === ''
-                      ? 'All Stores'
-                      : stores?.find(
-                        (store: Store) => store.id === selectedStore,
-                      )?.name}
-                  </span>
-                  <div className="pointer-events-none">
-                    <MbIcon
-                      name={
-                        menuOpen
-                          ? EIconName.ARROW_DROP_UP
-                          : EIconName.ARROW_DROP_DOWN
+    <section id="marketplac" className="marketplac">
+      <div className="container">
+        <div className="text-left">
+          <span className="nfth">All</span>
+          <span className="nfth">Art</span>
+          <span className="nfth">Gaming</span>
+          <span className="nfth">Memberships</span>
+          <span className="nfth">PFPs</span>
+          <span className="nfth">Photography</span>
+          <span className="nfth">Music</span>
+        </div>
+        <br></br>
+        <section id="nftcollections" className="nftcollections">
+          <div className="container">
+            <div className="row">
+              {/* <MbMenuWrapper setIsOpen={setMenuOpen}>
+                  <div
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    onKeyDown={() => setMenuOpen(!menuOpen)}
+                    role="button"
+                    tabIndex={-1}
+                  >
+                    <MbTab
+                      label={
+                        <div className="flex space-x-8 items-center">
+                          <span>
+                            {selectedStore === ""
+                              ? "All Stores"
+                              : stores?.find(
+                                  (store: Store) => store.id === selectedStore
+                                )?.name}
+                          </span>
+                          <div className="pointer-events-none">
+                            <MbIcon
+                              name={
+                                menuOpen
+                                  ? EIconName.ARROW_DROP_UP
+                                  : EIconName.ARROW_DROP_DOWN
+                              }
+                              size="16px"
+                              color="blue-300"
+                              darkColor="blue-100"
+                            />
+                          </div>
+                        </div>
                       }
-                      size="16px"
-                      color="blue-300"
-                      darkColor="blue-100"
+                      isSmall
                     />
                   </div>
-                </div>
-              )}
-              isSmall
-            />
-          </div>
-          <MbDropdownMenu
-            items={storeTabs || []}
-            isOpen={menuOpen}
-            className="mt-2"
-          />
-        </MbMenuWrapper>
-      </div>
+                  <MbDropdownMenu
+                    items={storeTabs || []}
+                    isOpen={menuOpen}
+                    className="mt-2"
+                  />
+                </MbMenuWrapper> */}
 
-      {/** grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 my-12">
-        {loading ? (
-          <LoadingItem />
-        ) : (
-          nftsData?.map((nft: StoreNftsData) => (
-            <Item key={nft.metadata_id} item={nft} showModal={showModal} />
-          ))
-        )}
+              {loading ? (
+                <LoadingItem />
+              ) : (
+                nftsData?.map((nft: StoreNftsData) => (
+                  <div
+                    key={nft.metadata_id}
+                    className="col-lg-4 col-md-6 d-flex align-items-stretch"
+                  >
+                    <div className="card">
+                      <Item item={nft} showModal={showModal} />
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </section>
   );
 }
 

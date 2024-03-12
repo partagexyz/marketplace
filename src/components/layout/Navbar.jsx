@@ -48,10 +48,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  className="nav-link scrollto"
-                  href="/app"
-                >
+                <a className="nav-link scrollto" href="/app">
                   Download App
                 </a>
               </li>
