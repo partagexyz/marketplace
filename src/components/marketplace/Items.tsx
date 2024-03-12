@@ -9,7 +9,7 @@ import { useState } from "react";
 import { useStoreData } from "../../hooks/useStoreData";
 import { useStoreNfts } from "../../hooks/useStoreNfts";
 import { SelectedNft, Store } from "../../types/types";
-import { Item, LoadingItem } from "./item";
+import { Item, LoadingItem } from "./Item";
 import { StoreNftsData } from "@mintbase-js/data/lib/api/storeNfts/storeNfts.types";
 
 function Items({
@@ -51,7 +51,7 @@ function Items({
         <section id="nftcollections" className="nftcollections">
           <div className="container">
             <div className="row">
-              {/* <MbMenuWrapper setIsOpen={setMenuOpen}>
+              <MbMenuWrapper setIsOpen={setMenuOpen}>
                   <div
                     onClick={() => setMenuOpen(!menuOpen)}
                     onKeyDown={() => setMenuOpen(!menuOpen)}
@@ -90,8 +90,7 @@ function Items({
                     isOpen={menuOpen}
                     className="mt-2"
                   />
-                </MbMenuWrapper> */}
-
+                </MbMenuWrapper>
               {loading ? (
                 <LoadingItem />
               ) : (
