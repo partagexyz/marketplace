@@ -48,10 +48,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  className="nav-link scrollto"
-                  href="/app"
-                >
+                <a className="nav-link scrollto" href="/app">
                   Download App
                 </a>
               </li>
@@ -60,13 +57,13 @@ const Navbar = () => {
                   Marketplace
                 </a>
               </li>
+              <li>
+                <a className="nav-link scrollto" href="/dashboard">
+                  Dashboard
+                </a>
+              </li>
               {isConnected ? (
                 <>
-                  <li>
-                    <a className="getstarted scrollto" href="/dashboard">
-                      Dashboard
-                    </a>
-                  </li>
                   <li>
                     <a onClick={disconnect} className="getstarted scrollto">
                       Disconnect Wallet
