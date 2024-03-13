@@ -31,7 +31,7 @@ function Item({
 
       <div className="card-body">
         <h5 className="card-title">
-          <a href="/nftdetail">{item.title}</a>
+          {item.title}
         </h5>
         <p className="description">
           <span id="pricetag">

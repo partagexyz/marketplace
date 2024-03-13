@@ -41,7 +41,9 @@ const NftPreview = () => {
                 className="col-lg-4 col-md-6 d-flex align-items-stretch"
               >
                 <div className="card">
-                  <Item item={item}/>
+                <a href="/marketplace">
+                    <Item item={item} />
+                  </a>
                 </div>
               </div>
             ))
