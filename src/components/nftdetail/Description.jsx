@@ -1,22 +1,34 @@
 "use client";
-
-import React from "react";
-import joinimg from "../../assets/img/partabout.png";
+import React, { useState, useEffect } from "react";
+import { Item, LoadingItem } from "../nftdetail/Item";
+import { useStoreNfts } from "../../hooks/useStoreNfts";
+import joinimg from "../../assets/img/red-tiller-white.jpg";
 import Image from "next/image";
 
-import { useState } from "react";
 import BuyModal from "../BuyModal/BuyModal";
 
 const Description = () => {
+  const { nftsData, loading } = useStoreNfts("");
   const [showBuyModal, setShowBuyModal] = useState(false);
+  const [randomItem, setRandomItem] = useState(null);
+
+  useEffect(() => {
+    const getRandomItem = () => {
+      if (!loading && nftsData && nftsData.length > 0) {
+        const shuffledItems = shuffleArray(nftsData);
+        const selectedItem = shuffledItems[0]; // Selecting the first item
+        setRandomItem(selectedItem);
+      }
+    };
+
+    getRandomItem();
+  }, [loading, nftsData]);
 
   const handleBuyClick = () => {
-    // open the BuyModal when the "BUY" button is clicked
     setShowBuyModal(true);
   };
 
   const handleCloseBuyModal = () => {
-    // close the BuyModal
     setShowBuyModal(false);
   };
 
@@ -26,18 +38,23 @@ const Description = () => {
         <div className="container">
           <div id="aboutmore" className="row">
             <div className="col-lg-6 col-md-6 order-1 order-lg-1 content">
-              <div className="headpare">
-                <h5>Created By</h5>
-
-                <p className="description">
-                  <Image src={joinimg} id="collectionprofile" alt="..." />{" "}
-                  <span id="pricetag">Shoosi pank</span>
-                </p>
+              <div className="d-flex justify-content-between align-items-center">
+                {/* First word with icon */}
+                <div>
+                  <span>
+                    <h2>NISAN GT -R</h2>
+                  </span>
+                </div>
+                {/* Second word */}
+                <div>
+                  <span>
+                    <p>#9761</p>
+                  </span>
+                </div>
               </div>
+
               <br></br>
               <div className="headpare">
-                <h5>Description</h5>
-
                 <p>
                   The Experience spinner at shooshi as been a very whdg djwgdil
                   lwig gy gwyg yelfyegf vce lasihg sgy ouys godfuyg douys dy
@@ -46,74 +63,157 @@ const Description = () => {
               </div>
               <br />
               <div className="headpare">
-                <h5>Datails</h5>
+                <h5>
+                  <i className="bi bi-record-circle"></i> Pick - Up
+                </h5>
 
-                <p className="description">
-                  <i className="bi bi-person"></i>{" "}
-                  <span id="pricetag">Owner is ....</span>
-                </p>
-                <p className="description">
-                  <i className="bi bi-bag"></i>{" "}
-                  <span id="pricetag">Url is ...</span>
-                </p>
-                <p className="description">
-                  <i className="bi bi-cart"></i>{" "}
-                  <span id="pricetag">Provider is ..</span>
-                </p>
-                <p className="description">
-                  <i className="bi bi-basket"></i>{" "}
-                  <span id="pricetag">Supply is ......</span>
-                </p>
+                <div className="row">
+                  <div className="col-lg-4 col-md-4">
+                    <div className="column-content">
+                      <p className="description">
+                        <span id="pricetag">
+                          <b>Location</b>
+                        </span>
+                      </p>
+                      <p className="description">
+                        <span id="pricetag">Kotasama</span>
+                        <i className="bi bi-chevron-down"></i>{" "}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-4">
+                    <div className="column-content">
+                      <p className="description">
+                        <span id="pricetag">
+                          <b>Date</b>
+                        </span>
+                      </p>
+                      <p className="description">
+                        <span id="pricetag">20 July, 2024</span>
+                        <i className="bi bi-chevron-down"></i>{" "}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-4">
+                    <div className="">
+                      <p className="description">
+                        <span id="pricetag">
+                          <b>Time</b>
+                        </span>
+                      </p>
+                      <p className="description">
+                        <span id="pricetag">07 : 00 </span>
+                        <i className="bi bi-chevron-down"></i>{" "}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
+
               <br />
               <div className="headpare">
-                <h5>Tags</h5>
+                <h5>
+                  <i className="bi bi-record-circle-fill"></i> Drop - Off
+                </h5>
 
-                <p className="description">
-                  <span id="pricetag">Shoshi</span>
-                </p>
-                <p className="description">
-                  <span id="pricetag">Resturant</span>
-                </p>
-                <p className="description">
-                  <span id="pricetag">Shoosh</span>
-                </p>
-                <p className="description">
-                  <span id="pricetag">Hokushi</span>
-                </p>
+                <div className="row">
+                  <div className="col-lg-4 col-md-4">
+                    <div className="column-content">
+                      <p className="description">
+                        <span id="pricetag">
+                          <b>Location</b>
+                        </span>
+                      </p>
+                      <p className="description">
+                        <span id="pricetag">Kotasama</span>
+                        <i className="bi bi-chevron-down"></i>{" "}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-4">
+                    <div className="column-content">
+                      <p className="description">
+                        <span id="pricetag">
+                          <b>Date</b>
+                        </span>
+                      </p>
+                      <p className="description">
+                        <span id="pricetag">20 July, 2024</span>
+                        <i className="bi bi-chevron-down"></i>{" "}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-4">
+                    <div className="">
+                      <p className="description">
+                        <span id="pricetag">
+                          <b>Time</b>
+                        </span>
+                      </p>
+                      <p className="description">
+                        <span id="pricetag">07 : 00 </span>
+                        <i className="bi bi-chevron-down"></i>{" "}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br></br>
+              <div style={{ borderTop: "1px solid gray" }} className="headpare">
+                <div className="d-flex justify-content-between align-items-center">
+                  {/* First word with icon */}
+                  <div>
+                    <span>
+                      <h4>Total Rental Price</h4>
+                    </span>
+                  </div>
+                  {/* Second word */}
+                  <div>
+                    <span>
+                      <h4>$80.00</h4>
+                    </span>
+                  </div>
+                </div>
+
+                <p>Overall price and includes rental discount</p>
+              </div>
+              <br></br>
+              <div>
+                <a
+                  id="provbut"
+                  class="full-width-button"
+                  onClick={handleBuyClick}
+                >
+                  BUY
+                </a>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 pt-4 pt-lg-0 order-2 order-lg-2 content">
-              <h3>00 : 00 : 00</h3>
+              {loading ? (
+                <LoadingItem />
+              ) : (
+                randomItem && ( // Render only if randomItem exists
+                  <div className="card">
+                    <a href="/nftdetail">
+                      <Item item={randomItem} />
+                    </a>
 
-              <div className="card">
-                <Image src={joinimg} className="card-img-top" alt="..." />
-
-                <div className="card-body">
-                  <h5 className="card-title">
-                    <a href="">gedhge</a>
-                  </h5>
-                  <p className="description">
-                    <Image src={joinimg} id="collectionprofile" alt="..." />{" "}
-                    <span id="pricetag">bkbef</span>
-                  </p>
-                </div>
-                <div className="price-container">
-                  <span className="price left">
-                    <span style={{ color: "gray" }}>Daily Price</span>
-                    <br></br>
-                    <span id="pricetag">2.46 USDT</span>
-                  </span>
-                  <span className="price right">
-                    <span style={{ color: "gray" }}>Montly Price</span>{" "}
-                    <br></br>
-                    <span id="pricetag">4.76 USDT</span>
-                  </span>
-                </div>
-              </div>
-              <a id="provbut" class="full-width-button" onClick={handleBuyClick}>
-                BUY
-              </a>
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        <a href="/nftdetail">{randomItem.title}</a>
+                      </h5>
+                      <p className="description">
+                        <span id="pricetag">
+                          {randomItem.price
+                            ? (randomItem.price / 1000000).toString()
+                            : "0"}{" "}
+                          USDT
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -123,5 +223,14 @@ const Description = () => {
     </>
   );
 };
+
+// Function to shuffle array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 export default Description;
