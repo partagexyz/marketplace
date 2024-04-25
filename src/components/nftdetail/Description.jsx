@@ -11,6 +11,18 @@ const Description = () => {
   const { nftsData, loading } = useStoreNfts("");
   const [showBuyModal, setShowBuyModal] = useState(false);
   const [randomItem, setRandomItem] = useState(null);
+  const [startDate, setStartDate] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [endTime, setEndTime] = useState("");
+
+  const inputStyle = (value) => ({
+    backgroundColor: value ? "gray" : "",
+    color: value ? "white" : "",
+    border: "1px solid gray",
+    padding: "8px",
+    width: "100%",
+  });
 
   useEffect(() => {
     const getRandomItem = () => {
@@ -89,8 +101,15 @@ const Description = () => {
                         </span>
                       </p>
                       <p className="description">
-                        <span id="pricetag">20 July, 2024</span>
-                        <i className="bi bi-chevron-down"></i>{" "}
+                        <span id="pricetag">
+                          <input
+                            type="date"
+                            value={startDate}
+                            onChange={(e) => setStartDate(e.target.value)}
+                            style={inputStyle(startDate)}
+                          />
+                        </span>
+                        {/* <i className="bi bi-chevron-down"></i>{" "} */}
                       </p>
                     </div>
                   </div>
@@ -102,8 +121,15 @@ const Description = () => {
                         </span>
                       </p>
                       <p className="description">
-                        <span id="pricetag">07 : 00 </span>
-                        <i className="bi bi-chevron-down"></i>{" "}
+                        <span id="pricetag">
+                          <input
+                            type="time"
+                            value={startTime}
+                            onChange={(e) => setStartTime(e.target.value)}
+                            style={inputStyle(startTime)}
+                          />
+                        </span>
+                        {/* <i className="bi bi-chevron-down"></i>{" "} */}
                       </p>
                     </div>
                   </div>
@@ -138,8 +164,16 @@ const Description = () => {
                         </span>
                       </p>
                       <p className="description">
-                        <span id="pricetag">20 July, 2024</span>
-                        <i className="bi bi-chevron-down"></i>{" "}
+                        <span id="pricetag">
+                          {" "}
+                          <input
+                            type="date"
+                            value={startDate}
+                            onChange={(e) => setStartDate(e.target.value)}
+                            style={inputStyle(startDate)}
+                          />
+                        </span>
+                        {/* <i className="bi bi-chevron-down"></i>{" "} */}
                       </p>
                     </div>
                   </div>
@@ -151,8 +185,16 @@ const Description = () => {
                         </span>
                       </p>
                       <p className="description">
-                        <span id="pricetag">07 : 00 </span>
-                        <i className="bi bi-chevron-down"></i>{" "}
+                        <span id="pricetag">
+                          {" "}
+                          <input
+                            type="time"
+                            value={startTime}
+                            onChange={(e) => setStartTime(e.target.value)}
+                            style={inputStyle(startTime)}
+                          />
+                        </span>
+                        {/* <i className="bi bi-chevron-down"></i>{" "} */}
                       </p>
                     </div>
                   </div>
