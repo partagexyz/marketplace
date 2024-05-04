@@ -4,25 +4,19 @@ import { initHeaderScrolled } from "../../assets/js/headerScrolled";
 import { useMbWallet } from "@mintbase-js/react";
 
 const Navbar = () => {
-  const { isConnected, connect, activeAccountId, disconnect } = useMbWallet();
-  // const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [isMobileNavVisible, setMobileNavVisibility] = useState(false);
-
-  const toggleMobileNav = () => {
-    setMobileNavVisibility(!isMobileNavVisible);
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
   };
+
+  const { isConnected, connect, activeAccountId, disconnect } = useMbWallet();
 
   useEffect(() => {
     initHeaderScrolled();
 
     const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
-    //const navbar = document.querySelector("#navbar");
-
-    mobileNavToggle.addEventListener("click", () => {
-      toggleMobileNav();
-    });
-  }, [isMobileNavVisible]);
+  });
 
   return (
     <>
@@ -34,11 +28,19 @@ const Navbar = () => {
             </a>
           </h1>
 
-          <nav
-            id="navbar"
-            className={`navbar ${isMobileNavVisible ? "navbar-mobile" : ""}`}
-          >
-            <ul>
+          <nav id="navbar">
+            <button
+              className="menu-toggle"
+              onClick={toggleNav}
+              style={{ background: "none", border: "none" }}
+            >
+              {isOpen ? (
+                <i className="bi bi-x-lg"></i>
+              ) : (
+                <i className="bi bi-list"></i>
+              )}
+            </button>
+            <ul className={`nav-links ${isOpen ? "active" : ""}`}>
               <li>
                 <a
                   className="nav-link scrollto"
@@ -78,8 +80,6 @@ const Navbar = () => {
                 </li>
               )}
             </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
-            <br></br>
           </nav>
         </div>
       </header>
