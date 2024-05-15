@@ -1027,7 +1027,13 @@ section {
 
 @media (max-width: 767px) {
   .nftcollections .card {
-    min-width: 100%;
+    min-width: calc(50% - 10px);
+    margin: 0 5px;
+  }
+  .nftcollections .cardsmall {
+    flex-shrink: 0;
+    max-width: 100%;
+    width: 75%;
   }
 
   .nftcollections .icon-boxes {
@@ -1038,6 +1044,7 @@ section {
     scrollbar-color: #ffffff rgba(29, 42, 53, 0.7);
     margin-bottom: 20px;
   }
+
   .nftcollections .image-container {
     float: left;
     width: 40%;

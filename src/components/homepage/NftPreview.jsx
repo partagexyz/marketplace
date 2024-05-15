@@ -38,7 +38,7 @@ const NftPreview = () => {
             randomItems.map((item, index) => (
               <div
                 key={index}
-                className="col-lg-4 col-md-6 d-flex align-items-stretch"
+                className="cardsmall col-lg-4 col-md-6 d-flex align-items-stretch"
               >
                 <div className="card">
                   <a href="/nftdetail">
